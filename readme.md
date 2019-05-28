@@ -26,6 +26,51 @@ typomatic
   .done()
 ```
 
+*Typomatic doesn't add any CSS to your code, inline or otherwise.<br/>
+Use the CSS below if you want, or simply copy the classes and style them as you wish.<br/>*
+
+```css
+.typomatic .typing {
+  white-space: pre-wrap;
+}
+.typomatic .cursor {
+  border-left: 2px solid;
+}
+.typomatic .cursor.blink {
+  -webkit-animation: blink .9s infinite;
+          animation: blink .9s infinite;
+}
+
+@-webkit-keyframes blink {
+    0% { opacity: 0; }
+   10% { opacity: 0; }
+   20% { opacity: 0; }
+   30% { opacity: 0; }
+   40% { opacity: 0; }
+   50% { opacity: 1; }
+   60% { opacity: 1; }
+   70% { opacity: 1; }
+   80% { opacity: 1; }
+   90% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+   10% { opacity: 0; }
+   20% { opacity: 0; }
+   30% { opacity: 0; }
+   40% { opacity: 0; }
+   50% { opacity: 1; }
+   60% { opacity: 1; }
+   70% { opacity: 1; }
+   80% { opacity: 1; }
+   90% { opacity: 1; }
+  100% { opacity: 1; }
+}
+```
+
+
 ###### Methods
 
 **type(text, speed)**<br/>
