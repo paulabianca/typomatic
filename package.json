@@ -1,0 +1,21 @@
+{
+  "name": "typomatic",
+  "version": "0.0.0",
+  "description": "Just type it.",
+  "main": "typomatic.js",
+  "module": "typomatic.es.js",
+  "scripts": {
+    "dev": "rollup -cw",
+    "min": "npm run umd && npm run esm",
+    "umd": "terser typomatic.js -o typomatic.min.js",
+    "esm": "terser typomatic.es.js -o typomatic.min.es.js"
+  },
+  "author": "Paula Griguță <paula.la@live.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^1.12.4",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "terser": "^4.0.0"
+  }
+}

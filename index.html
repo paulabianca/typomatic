@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>Typomatic</title>
+
+    <script src="typomatic.js"></script>
+
+    <style>
+      @-webkit-keyframes blink {
+          0% { opacity: 0; }
+         10% { opacity: 0; }
+         20% { opacity: 0; }
+         30% { opacity: 0; }
+         40% { opacity: 0; }
+         50% { opacity: 1; }
+         60% { opacity: 1; }
+         70% { opacity: 1; }
+         80% { opacity: 1; }
+         90% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+      @keyframes blink {
+          0% { opacity: 0; }
+         10% { opacity: 0; }
+         20% { opacity: 0; }
+         30% { opacity: 0; }
+         40% { opacity: 0; }
+         50% { opacity: 1; }
+         60% { opacity: 1; }
+         70% { opacity: 1; }
+         80% { opacity: 1; }
+         90% { opacity: 1; }
+        100% { opacity: 1; }
+      }
+
+      .typomatic .typing {
+        white-space: pre-wrap;
+      }
+      .typomatic .cursor {
+        border-left: 2px solid;
+      }
+      .typomatic .cursor.blink {
+        -webkit-animation: blink .9s infinite;
+                animation: blink .9s infinite;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <code id="typomatic"></code>
+
+    <script>
+
+      const typomatic = new Typomatic(document.getElementById('typomatic'));
+
+      typomatic
+        .type('<em>Hello</em> Typomatic!')
+        .exec(() => alert('Type slower!'))
+        .type('\nOK. <em>Goodbye.</em>', 300)
+        .done()
+
+    </script>
+
+  </body>
+
+</html>
