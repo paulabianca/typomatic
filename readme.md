@@ -1,5 +1,5 @@
 ## typomatic
-
+[![NPM](https://img.shields.io/npm/v/typomatic.svg)](https://www.npmjs.com/package/typomatic)
 #### Installation
 
 `npm install typomatic`<br/>
